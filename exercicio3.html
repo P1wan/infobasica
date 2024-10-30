@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 3 - Site Educativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="exercicios.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Exercício 3: Abrir Calculadora e Inserir Resultados</h1>
+    </header>
+
+    <main>
+        <section class="exercicio">
+            <p>Utilize a calculadora do seu computador para resolver as seguintes operações e insira os resultados:</p>
+            <form id="form-exercicio3" onsubmit="return validarExercicio3()">
+                <label for="resultado1">1. 12 + 8 =</label>
+                <input type="number" id="resultado1" name="resultado1" required>
+
+                <label for="resultado2">2. 15 x 3 =</label>
+                <input type="number" id="resultado2" name="resultado2" required>
+
+                <label for="resultado3">3. 50 ÷ 2 =</label>
+                <input type="number" id="resultado3" name="resultado3" required>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="resultado"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Site Educativo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

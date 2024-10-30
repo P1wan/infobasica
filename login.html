@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Login - Site Educativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+
+    <main>
+        <section class="login-form">
+            <h2>Acesse sua conta</h2>
+            <form onsubmit="return validarLogin()">
+                <label for="usuario">Nome de Usuário:</label>
+                <input type="text" id="usuario" name="usuario" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+            <p>Senha padrão: <strong>unifor</strong></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Site Educativo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

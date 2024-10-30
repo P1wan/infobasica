@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4 - Site Educativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="exercicios.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Exercício 4: Upload de Arquivo</h1>
+    </header>
+
+    <main>
+        <section class="exercicio">
+            <p>Crie um arquivo chamado <strong>tarefa.txt</strong> com a frase "Concluí a tarefa 4" e arraste-o para o campo abaixo:</p>
+            <input type="file" id="arquivo" name="arquivo" accept=".txt" onchange="validarExercicio4()">
+            <div id="resultado"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Site Educativo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

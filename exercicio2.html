@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2 - Site Educativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="exercicios.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Exercício 2: Copiar URL de um Vídeo no YouTube</h1>
+    </header>
+
+    <main>
+        <section class="exercicio">
+            <p>Busque um vídeo no YouTube e copie o link (URL) do vídeo. Em seguida, cole o link no campo abaixo:</p>
+            <form id="form-exercicio2" onsubmit="return validarExercicio2()">
+                <label for="url-video">URL do Vídeo:</label>
+                <input type="url" id="url-video" name="url-video" required>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="video-embed"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Site Educativo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

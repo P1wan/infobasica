@@ -2,131 +2,68 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Educativo - Navegação na Internet</title>
+    <title>Página Inicial - Site Educativo</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function autenticar(event) {
-            event.preventDefault();
-            const nome = document.getElementById('nome').value;
-            const senha = document.getElementById('senha').value;
-            if (nome === 'Aluno' && senha === 'unifor') {
-                alert('Login bem-sucedido!');
-                document.getElementById('perfil').style.display = 'block';
-                document.getElementById('login').style.display = 'none';
-            } else {
-                alert('Nome ou senha incorretos. Tente novamente.');
-            }
-        }
-    </script>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
+        <h1>Bem-vindo ao Site Educativo</h1>
         <nav>
             <ul>
-                <li><a href="#exercicio">Continuar Exercício</a></li>
-                <li><a href="#informacoes">Informações Gerais</a></li>
-                <li><a href="#login">Página de Login</a></li>
+                <li><a href="continuar-exercicio.html">Continuar Exercício</a></li>
+                <li><a href="informacoes-gerais.html">Informações Gerais</a></li>
+                <li><a href="login.html">Página de Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Página Inicial -->
-        <section id="inicio">
-            <h1>Bem-vindo ao Site Educativo de Navegação na Internet</h1>
-            <p>Aqui você aprenderá a navegar na internet, identificar elementos comuns de sites, e usar ferramentas online com segurança e eficiência.</p>
-            <button onclick="alert('Botão clicado! Botões servem para interações no site, como enviar dados ou navegar para outra página.')">Clique em Mim!</button>
+        <!-- Seção de Botões Interativos -->
+        <section class="botoes-interativos">
+            <h2>Explore os Botões</h2>
+            <button onclick="exibirMensagem('Você clicou no Botão A')">Botão A</button>
+            <button onclick="exibirMensagem('Você clicou no Botão B')">Botão B</button>
+            <button onclick="exibirMensagem('Você clicou no Botão C')">Botão C</button>
         </section>
 
-        <!-- Página de Login -->
-        <section id="login">
-            <h2>Página de Login</h2>
-            <form onsubmit="autenticar(event)">
+        <!-- Seção de Barras de Rolagem -->
+        <section class="barras-rolagem">
+            <h2>Navegue pelo Conteúdo</h2>
+            <div class="scroll-horizontal">
+                <p>Este é um exemplo de barra de rolagem horizontal. Arraste para a direita para ver mais conteúdo.</p>
+                <p style="display:inline-block; width:1000px;">Conteúdo adicional para rolagem horizontal.</p>
+            </div>
+            <div class="scroll-vertical">
+                <p>Este é um exemplo de barra de rolagem vertical. Role para baixo para ver mais conteúdo.</p>
+                <p>Conteúdo adicional para rolagem vertical.</p>
+                <p>Mais conteúdo.</p>
+                <p>Mais conteúdo.</p>
+                <p>Mais conteúdo.</p>
+                <p>Mais conteúdo.</p>
+            </div>
+        </section>
+
+        <!-- Seção de Caixas de Texto -->
+        <section class="caixas-texto">
+            <h2>Formulários de Contato</h2>
+            <form>
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required><br>
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required><br>
-                <button type="submit">Login</button>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
             </form>
-            <p>Após o login, você verá um mockup de uma página de perfil com opções como mudar e-mail, senha e imagem de perfil.</p>
-        </section>
-
-        <!-- Página de Perfil (após Login) -->
-        <section id="perfil" style="display: none;">
-            <h2>Perfil do Aluno</h2>
-            <p>Bem-vindo ao seu perfil! Aqui você pode:</p>
-            <ul>
-                <li>Mudar seu e-mail (não funcional)</li>
-                <li>Mudar sua senha (não funcional)</li>
-                <li>Alterar sua imagem de perfil (não funcional)</li>
-            </ul>
-        </section>
-
-        <!-- Página de Informações Gerais -->
-        <section id="informacoes">
-            <h2>Informações Gerais</h2>
-            <h3>Glossário de Termos de Navegação</h3>
-            <ul>
-                <li><strong>Link:</strong> Um elemento clicável que leva a outra página ou seção.</li>
-                <li><strong>Botão:</strong> Um componente usado para interações, como enviar um formulário.</li>
-                <li><strong>Caixa de Seleção:</strong> Um campo onde você pode marcar ou desmarcar uma opção.</li>
-                <li><strong>HTTPS:</strong> Protocolo de navegação seguro, indicado pelo cadeado na barra de endereço.</li>
-            </ul>
-            <h3>Atalhos Básicos do Windows</h3>
-            <ul>
-                <li><strong>Ctrl + C:</strong> Copiar</li>
-                <li><strong>Ctrl + V:</strong> Colar</li>
-                <li><strong>Ctrl + X:</strong> Recortar</li>
-            </ul>
-        </section>
-
-        <!-- Página de Continuação do Exercício -->
-        <section id="exercicio">
-            <h2>Continuar Exercício</h2>
-            <div>
-                <h3>Preencha o Nome e Data de Nascimento</h3>
-                <form>
-                    <label for="nome_completo">Nome Completo:</label>
-                    <input type="text" id="nome_completo" name="nome_completo"><br>
-                    <label for="data_nascimento">Data de Nascimento:</label>
-                    <input type="date" id="data_nascimento" name="data_nascimento"><br>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-            <div>
-                <h3>Copiar URL de um Vídeo no YouTube</h3>
-                <p>Encontre um vídeo no YouTube, copie a URL e cole abaixo:</p>
-                <form>
-                    <input type="url" placeholder="Cole a URL do vídeo aqui"><br>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-            <div>
-                <h3>Upload de Arquivo</h3>
-                <p>Crie um arquivo chamado <strong>tarefa.txt</strong> com uma frase e faça upload abaixo:</p>
-                <input type="file" id="arquivo" name="arquivo" accept=".txt"><br>
-                <button onclick="lerArquivo()">Enviar Arquivo</button>
-                <script>
-                    function lerArquivo() {
-                        const arquivo = document.getElementById('arquivo').files[0];
-                        if (arquivo) {
-                            const leitor = new FileReader();
-                            leitor.onload = function(e) {
-                                alert('Conteúdo do arquivo: ' + e.target.result);
-                            };
-                            leitor.readAsText(arquivo);
-                        } else {
-                            alert('Nenhum arquivo selecionado.');
-                        }
-                    }
-                </script>
-            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Site Educativo de Navegação. Todos os direitos reservados.</p>
+        <p>&copy; 2023 Site Educativo. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>

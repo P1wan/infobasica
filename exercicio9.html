@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 9 - Site Educativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="exercicios.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Exercício 9: Escolher a Página Inicial</h1>
+    </header>
+
+    <main>
+        <section class="exercicio">
+            <p>Escolha uma página inicial para o seu navegador e explique o motivo da sua escolha:</p>
+            <form id="form-exercicio9" onsubmit="return validarExercicio9()">
+                <label>
+                    <input type="radio" name="pagina-inicial" value="Google" required> Google
+                </label>
+                <label>
+                    <input type="radio" name="pagina-inicial" value="Site Educativo"> Site Educativo
+                </label>
+                <label>
+                    <input type="radio" name="pagina-inicial" value="Outra"> Outra
+                </label>
+
+                <label for="motivo">Explique o motivo da sua escolha:</label>
+                <textarea id="motivo" name="motivo" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="resultado"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Site Educativo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

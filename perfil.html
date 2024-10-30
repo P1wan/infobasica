@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Usuário - Site Educativo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Perfil do Usuário</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="informacoes-gerais.html">Informações Gerais</a></li>
+                <li><a href="continuar-exercicio.html">Continuar Exercício</a></li>
+                <li><a href="logout.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="perfil">
+            <h2>Bem-vindo, Usuário</h2>
+            <img src="imagem-perfil.png" alt="Imagem de Perfil" class="imagem-perfil">
+            <form>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" value="usuario@example.com" disabled>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" value="******" disabled>
+
+                <button type="button" onclick="alert('Funcionalidade em desenvolvimento')">Alterar E-mail</button>
+                <button type="button" onclick="alert('Funcionalidade em desenvolvimento')">Alterar Senha</button>
+                <button type="button" onclick="alert('Funcionalidade em desenvolvimento')">Alterar Imagem de Perfil</button>
+            </form>
+            <p>Esta página é apenas explicativa e demonstra onde normalmente você poderia alterar suas informações de perfil.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Site Educativo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
