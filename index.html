@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Educativo - Navegação na Internet</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function autenticar(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const senha = document.getElementById('senha').value;
+            if (nome === 'Aluno' && senha === 'unifor') {
+                alert('Login bem-sucedido!');
+                document.getElementById('perfil').style.display = 'block';
+                document.getElementById('login').style.display = 'none';
+            } else {
+                alert('Nome ou senha incorretos. Tente novamente.');
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -28,7 +42,7 @@
         <!-- Página de Login -->
         <section id="login">
             <h2>Página de Login</h2>
-            <form>
+            <form onsubmit="autenticar(event)">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required><br>
                 <label for="senha">Senha:</label>
@@ -36,6 +50,17 @@
                 <button type="submit">Login</button>
             </form>
             <p>Após o login, você verá um mockup de uma página de perfil com opções como mudar e-mail, senha e imagem de perfil.</p>
+        </section>
+
+        <!-- Página de Perfil (após Login) -->
+        <section id="perfil" style="display: none;">
+            <h2>Perfil do Aluno</h2>
+            <p>Bem-vindo ao seu perfil! Aqui você pode:</p>
+            <ul>
+                <li>Mudar seu e-mail (não funcional)</li>
+                <li>Mudar sua senha (não funcional)</li>
+                <li>Alterar sua imagem de perfil (não funcional)</li>
+            </ul>
         </section>
 
         <!-- Página de Informações Gerais -->
